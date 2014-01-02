@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Linking the Pages</title>
+
+</head>
+<body>
+<div>
+	<ul>
+		<li url="http://google.com"> Google</li>
+		<li url="http://yahoo.com"> Yahoo</li>
+		<li url="http://facebook.com"> Facebook</li>		
+	</ul>
+</div>
+	<script>
+		
+		    var ulElement = document.getElementsByTagName('ul')[0];
+			
+			function myFunction(event){
+				//event.target.style.backgroundColor = "blue";
+				var li=event.target.getAttribute("url");
+						
+				window.location.assign(li);
+					
+		}	
+					
+		ulElement.addEventListener("click",myFunction,false);
+			
+	</script>
+</body>
+</html
