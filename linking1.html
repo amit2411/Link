@@ -14,17 +14,16 @@
 </div>
 	<script>
 		
-		    var ulElement = document.getElementsByTagName('ul')[0];
+	  // var ulElement = document.getElementsByTagName('ul')[0];
 			
-			function myFunction(event){
-				//event.target.style.backgroundColor = "blue";
-				var li=event.target.getAttribute("url");
+		function myFunction(e){
+				//e.target.style.backgroundColor = "blue";
+				//var li=e.target.getAttribute("url");
 						
-				window.location.assign(li);
-					
+				window.location.assign(e.target.getAttribute("url"));	
 		}	
 					
-		ulElement.addEventListener("click",myFunction,false);
+		document.getElementsByTagName('ul')[0].addEventListener("click",myFunction,false);
 			
 	</script>
 </body>
